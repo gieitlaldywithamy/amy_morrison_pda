@@ -55,6 +55,12 @@ describe('calculator', function () {
     assert.equal(7.5, calculator.runningTotal)
   })
 
+  it('should concatenate multiple numberClick()', function(){
+    calculator.numberClick(8);
+    calculator.numberClick(8);
+    assert.equal(calculator.runningTotal, 22);
+  })
+
   it('can divide the running total a negative number and return a floating number', function(){
     calculator.previousTotal = 30
     calculator.divide(-5)
